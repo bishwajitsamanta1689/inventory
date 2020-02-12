@@ -15,13 +15,14 @@ const tempCard = fs.readFileSync(`${__dirname}/templates/template-card.html`)
 const tempProduct = fs.readFileSync(`${__dirname}/templates/template-product.html`)
 const dataObj = JSON.parse(data);
 
-//Create Server
+//Create Server Call Back Function
 const server = http.createServer((req, res) => {
   const pathName = req.url;
 
   //Overview Page
   if (pathName === '/' || pathName === '/overview') {
-    res.end('This is from Overview Page!!')
+    res.writeHead(200, {'Content-type': 'text/html'});
+    res.end(tempOverview)
 
     // Product Page
   } else if (pathName === '/product') {
