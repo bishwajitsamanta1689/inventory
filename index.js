@@ -10,6 +10,10 @@ const server = http.createServer((req, res) => {
   } else if (pathName === '/product') {
     res.end('This is from Product Page');
   } else {
+    res.writeHead(404, {
+      'Content-type': 'text/html',
+      'my-own-header': 'hello-world'
+    })
     res.end('Page Not Found !!');
   }
 });
