@@ -1,8 +1,12 @@
+// Module Section Declaration
+// ---------------------------
+
 const fs = require('fs');
 const http = require('http');
 const url = require('url');
 
-// Server Section
+// Server Section Declaration
+//----------------------------
 
 //Data Declaration at the top level
 const data = fs.readFileSync(`${__dirname}/dev-data/data.json`);
@@ -17,8 +21,6 @@ const server = http.createServer((req, res) => {
 
   //Overview Page
   if (pathName === '/' || pathName === '/overview') {
-    
-
     res.end('This is from Overview Page!!')
 
     // Product Page
@@ -40,6 +42,7 @@ const server = http.createServer((req, res) => {
   }
 });
 
+//Listening on Port 8000
 server.listen(8000,'172.31.34.107', () => {
   console.log('Server has been started to listen request on port 8000')
 })
