@@ -6,9 +6,9 @@ const url = require('url');
 
 //Data Declaration at the top level
 const data = fs.readFileSync(`${__dirname}/dev-data/data.json`);
-const tempOverview = fs.readFileSync(`${__dirname}/dev-data/data.json`);
-const tempCard = fs.readFileSync(`${__dirname}/dev-data/data.json`)
-const tempProduct = fs.readFileSync(`${__dirname}/dev-data/data.json`)
+const tempOverview = fs.readFileSync(`${__dirname}/templates/template-overview.html`);
+const tempCard = fs.readFileSync(`${__dirname}/templates/template-card.html`)
+const tempProduct = fs.readFileSync(`${__dirname}/templates/template-product.html`)
 const dataObj = JSON.parse(data);
 
 //Create Server
