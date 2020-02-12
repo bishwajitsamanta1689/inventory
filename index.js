@@ -9,8 +9,9 @@ const server = http.createServer((req, res) => {
     res.end('This is from Overview Page!!')
   } else if (pathName === '/product') {
     res.end('This is from Product Page');
-  } 
-  res.end('Hello from the Server !!');
+  } else {
+    res.end('Page Not Found !!');
+  }
 });
 
 server.listen(8000,'172.31.34.107', () => {
