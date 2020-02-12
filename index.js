@@ -9,7 +9,9 @@ const server = http.createServer((req, res) => {
     res.end('This is from Overview Page!!')
   } else if (pathName === '/product') {
     res.end('This is from Product Page');
-  } else {
+  } else if (pathName === '/api') {
+    res.end ('This is from API!!')
+  }else {
     res.writeHead(404, {
       'Content-type': 'text/html',
       'my-own-header': 'hello-world'
